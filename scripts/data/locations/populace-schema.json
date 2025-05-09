@@ -1,0 +1,93 @@
+﻿{
+  "@context": ["http://www.w3.org/ns/csvw",{"@language": "cs"}],
+  "url": "sldb2021_pohlavi.csv",
+  "tableSchema": {
+    "columns": [
+	{
+      "name": "idhod",
+      "titles": "idhod",
+      "dc:description":"unikátní identifikátor údaje Veřejné databáze ČSÚ",
+      "required": true,
+      "datatype": "string"
+    }, 
+	{
+      "name": "hodnota",
+      "titles": "hodnota",
+      "dc:description":"zjištěná hodnota v numerickém formátu",
+      "required": true,
+      "datatype": "number"
+    }, 
+	{
+      "name": "ukaz_kod",
+      "titles": "ukaz_kod",
+      "dc:description":"kód ukazatele (statistické proměnné)",
+      "required": true,
+      "datatype": "string"
+    }, 
+	{
+      "name": "pohlavi_cis",
+      "titles": "pohlavi_cis",
+      "dc:description":"číselník pro pohlaví; pokud není uveden, jedná se o celkový údaj bez rozlišení pohlaví",
+      "required": false,
+      "datatype": "string"
+    }, 
+	{
+      "name": "pohlavi_kod",
+      "titles": "pohlavi_kod",
+      "dc:description":"kód položky z číselníku pro pohlaví; pokud není uveden, jedná se o celkový údaj bez rozlišení pohlaví",
+      "required": false,
+      "datatype": "string"
+    }, 
+	{
+      "name": "uzemi_cis",
+      "titles": "uzemi_cis",
+      "dc:description":"kód číselníku pro území",
+      "required": true,
+      "datatype": "string"
+    }, 
+	{
+      "name": "uzemi_kod",
+      "titles": "uzemi_kod",
+      "dc:description":"kód položky z číselníku pro území",
+      "required": true,
+      "datatype": "string"
+	}, 
+	{
+      "name": "sldb_rok",
+      "titles": "sldb_rok",
+      "dc:description":"rok sčítání ve formátu YYYY",
+      "required": true,
+      "datatype": "number"
+    }, 
+	{
+      "name": "sldb_datum",
+      "titles": "sldb_datum",
+      "dc:description":"rozhodné datum sčítání ve formátu YYYY-MM-DD",
+      "required": true,
+      "datatype": "date"
+    }, 
+	{
+      "name": "ukaz_txt",
+      "titles": "ukaz_txt",
+      "dc:description":"text ukazatele",
+      "required": true,
+      "datatype": "string"
+    }, 
+	{
+      "name": "pohlavi_txt",
+      "titles": "pohlavi_txt",
+      "dc:description":"text položky z číselníku pro pohlaví",
+      "required": false,
+      "datatype": "string"
+    }, 
+	{
+      "name": "uzemi_txt",
+      "titles": "uzemi_txt",
+      "dc:description":"text položky z číselníku pro území",
+      "required": true,
+      "datatype": "string"
+    }
+    ],
+    "primaryKey": "idhod"
+  }
+}

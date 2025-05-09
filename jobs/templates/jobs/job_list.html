@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <style>
+        .searchbox-container {
+            width: 100%;
+            max-width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            position: relative;
+            margin-bottom: 24px;
+        }
+        .searchbox-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .selected-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 8px 0;
+            gap: 8px;
+        }
+        .selected-chip {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #ccc;
+            background: #f3e8ff;
+            border-radius: 8px;
+            padding: 4px 8px;
+        }
+        .selected-chip select {
+            margin: 0 4px;
+            border: none;
+            background: transparent;
+        }
+        .selected-chip button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .searchbox-input {
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 4px;
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
+        .matched-list {
+            position: absolute;
+            z-index: 1000;
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 2px;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        .matched-list li {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .matched-list li.selected, .matched-list li:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Listings</h1>
+    <form method="get" autocomplete="off" id="job-search-form">
+        <input type="text" name="q" placeholder="Keyword" value="{{ query }}">
+        <div class="searchbox-container" id="location-searchbox">
+            <label class="searchbox-label" for="location-input">Location(s):</label>
+            <ul class="selected-list" id="selected-locations"></ul>
+            <input type="text" id="location-input" class="searchbox-input" placeholder="Enter region, district, city or part" autocomplete="off">
+            <ul id="location-suggestions" class="matched-list" style="display:none;"></ul>
+        </div>
+        <input type="hidden" name="locations" id="locations-hidden">
+        <button type="submit">Search</button>
+    </form>
+    <script>
+
+    const defaultLocations = [
+        { id: 19, label: 'Praha' },
+        { id: 27, label: 'Středočeský kraj' },
+        { id: 35, label: 'Jihočeský kraj' },
+        { id: 43, label: 'Plzeňský kraj' },
+        { id: 51, label: 'Karlovarský kraj' },
+        { id: 60, label: 'Ústecký kraj' },
+        { id: 78, label: 'Liberecký kraj' },
+        { id: 86, label: 'Královéhradecký kraj' },
+        { id: 94, label: 'Pardubický kraj' },
+        { id: 108, label: 'Kraj Vysočina' },
+        { id: 116, label: 'Jihomoravský kraj' },
+        { id: 124, label: 'Olomoucký kraj' },
+        { id: 132, label: 'Moravskoslezský kraj' },
+        { id: 141, label: 'Zlínský kraj' }
+    ];
+    let selectedLocations = [];
+    let locationMatches = [];
+    let matchToSelect = 0;
+    const input = document.getElementById('location-input');
+    const suggestions = document.getElementById('location-suggestions');
+    const selectedList = document.getElementById('selected-locations');
+    const locationsHidden = document.getElementById('locations-hidden');
+
+    function renderSelectedLocations() {
+        selectedList.innerHTML = '';
+        selectedLocations.forEach((loc, idx) => {
+            const li = document.createElement('li');
+            li.className = 'selected-chip';
+            li.innerHTML = `
+                <span>${loc.label}</span>
+                <div style="border-left:1px solid #ccc; border-right:1px solid #ccc; padding:0 4px; display:flex; align-items:center;">
+                    <select class="distance-select" data-idx="${idx}">
+                        <option value="0"${loc.distance==0?' selected':''}>0</option>
+                        <option value="10"${loc.distance==10?' selected':''}>10</option>
+                        <option value="20"${loc.distance==20?' selected':''}>20</option>
+                    </select>
+                    <label style="margin-left:2px;">km</label>
+                </div>
+                <button type="button" class="remove-btn" data-idx="${idx}" aria-label="Remove">&times;</button>
+            `;
+            selectedList.appendChild(li);
+        });
+
+        locationsHidden.value = selectedLocations.map(loc => loc.id + ':' + (loc.distance||0)).join(',');
+    }
+
+    selectedList.addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove-btn')) {
+            const idx = parseInt(e.target.getAttribute('data-idx'));
+            selectedLocations.splice(idx, 1);
+            renderSelectedLocations();
+        }
+    });
+
+    selectedList.addEventListener('change', function(e) {
+        if (e.target.classList.contains('distance-select')) {
+            const idx = parseInt(e.target.getAttribute('data-idx'));
+            selectedLocations[idx].distance = parseInt(e.target.value);
+            renderSelectedLocations();
+        }
+    });
+
+    async function fetchLocationMatches(q) {
+        if (!q) return [];
+        try {
+            const resp = await fetch(`/api/locations/?q=${encodeURIComponent(q)}`);
+            const data = await resp.json();
+
+            return (data.results || []).filter(match => !selectedLocations.some(selected => String(selected.id) === String(match.id)));
+        } catch {
+            return [];
+        }
+    }
+
+    function renderSuggestions() {
+        suggestions.innerHTML = '';
+        if (!locationMatches.length) {
+            suggestions.innerHTML = '<li style="color:#888;">No results</li>';
+        } else {
+            locationMatches.forEach((loc, i) => {
+                const li = document.createElement('li');
+                li.textContent = loc.label;
+                li.className = (i === matchToSelect ? 'selected' : '');
+                li.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                    selectLocation(loc);
+                });
+                suggestions.appendChild(li);
+            });
+        }
+        suggestions.style.display = 'block';
+    }
+
+    function selectLocation(loc) {
+        if (!selectedLocations.some(l => l.id === loc.id)) {
+            selectedLocations.push({ ...loc, distance: 0 });
+            renderSelectedLocations();
+        }
+        input.value = '';
+        locationMatches = [];
+        suggestions.style.display = 'none';
+    }
+
+    input.addEventListener('input', async function() {
+        const q = input.value.trim();
+        if (!q) {
+            suggestions.style.display = 'none';
+            locationMatches = [];
+            return;
+        }
+        locationMatches = await fetchLocationMatches(q);
+        matchToSelect = 0;
+        renderSuggestions();
+    });
+    input.addEventListener('keydown', function(e) {
+        if (!locationMatches.length) return;
+        if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            matchToSelect = Math.min(matchToSelect + 1, locationMatches.length - 1);
+            renderSuggestions();
+        } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            matchToSelect = Math.max(matchToSelect - 0, 0);
+            renderSuggestions();
+        } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (matchToSelect >= 0 && matchToSelect < locationMatches.length) {
+                selectLocation(locationMatches[matchToSelect]);
+            }
+        }
+    });
+    document.addEventListener('click', function(e) {
+        if (!input.contains(e.target) && !suggestions.contains(e.target)) {
+            suggestions.style.display = 'none';
+        }
+    });
+
+    (function() {
+        const params = new URLSearchParams(window.location.search);
+        const locs = params.get('locations');
+        if (locs) {
+            selectedLocations = locs.split(',').map(s => {
+                const [id, dist] = s.split(':');
+                const found = defaultLocations.find(l => l.id == id);
+                return found ? { ...found, distance: parseInt(dist||'0') } : { id, label: id, distance: parseInt(dist||'0') };
+            });
+            renderSelectedLocations();
+        }
+    })();
+    </script>
+    <ul>
+        {% for job in jobs %}
+            <li>
+                <a href="{% url 'job_detail' job.pk %}" target="_blank">
+                    <strong>{{ job.title }}</strong> at {{ job.company }}
+                </a><br>
+                Location: {{ job.location }}<br>
+                Posted: {{ job.date_posted }}<br>
+                <p>{{ job.description|truncatewords:30 }}</p>
+            </li>
+        {% empty %}
+            <li>No job offers found.</li>
+        {% endfor %}
+    </ul>
+    <div class="pagination">
+        <span>
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+        <div>
+            {% if page_obj.has_previous %}
+                <a href="?q={{ query }}&location={{ location }}&page=1">First</a>
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <strong>{{ num }}</strong>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a href="?q={{ query }}&location={{ location }}&page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

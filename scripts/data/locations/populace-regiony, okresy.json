@@ -1,0 +1,1071 @@
+{
+"List1":[
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Population of territorial units of the Czech Republic, 1 January 2021"
+ },
+ null,
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Kód území",
+  "Column2": "Region soudržnosti,\nkraj, okres\nNUTS 2, NUTS 3, LAU 1",
+  "Column3": "Počet obyvatel   Population",
+  "Column6": "Průměrný věk  Average age"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Code of",
+  "Column3": "celkem",
+  "Column4": "muži",
+  "Column5": "ženy",
+  "Column6": "celkem",
+  "Column7": "muži",
+  "Column8": "ženy"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "NUTS\/LAU",
+  "Column3": "Total",
+  "Column4": "Males",
+  "Column5": "Females",
+  "Column6": "Total",
+  "Column7": "Males",
+  "Column8": "Females"
+ },
+ null,
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0",
+  "Column2": "Česká republika",
+  "Column3": 10701777,
+  "Column4": 5275103,
+  "Column5": 5426674,
+  "Column6": 42.58078929321738,
+  "Column7": 41.14876666863187,
+  "Column8": 43.972814471626634
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Regiony soudržnosti (Cohesion regions-NUTS 2)"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ01",
+  "Column2": "Praha",
+  "Column3": 1335084,
+  "Column4": 653654,
+  "Column5": 681430,
+  "Column6": 41.96836303932936,
+  "Column7": 40.529789460479094,
+  "Column8": 43.34829843124019
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ02",
+  "Column2": "Střední Čechy",
+  "Column3": 1397997,
+  "Column4": 691986,
+  "Column5": 706011,
+  "Column6": 41.37824938107879,
+  "Column7": 40.17278673267956,
+  "Column8": 42.559765357763546
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ03",
+  "Column2": "Jihozápad",
+  "Column3": 1234592,
+  "Column4": 611866,
+  "Column5": 622726,
+  "Column6": 42.94461085119619,
+  "Column7": 41.67993645667516,
+  "Column8": 44.187230017696386
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ04",
+  "Column2": "Severozápad",
+  "Column3": 1110315,
+  "Column4": 550290,
+  "Column5": 560025,
+  "Column6": 42.61802596560435,
+  "Column7": 41.26017372658053,
+  "Column8": 43.95227445203339
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ05",
+  "Column2": "Severovýchod",
+  "Column3": 1516135,
+  "Column4": 749316,
+  "Column5": 766819,
+  "Column6": 42.877536960758775,
+  "Column7": 41.42075439467461,
+  "Column8": 44.3010677878352
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ06",
+  "Column2": "Jihovýchod",
+  "Column3": 1704179,
+  "Column4": 840615,
+  "Column5": 863564,
+  "Column6": 42.72240914833477,
+  "Column7": 41.25517448534704,
+  "Column8": 44.15065241256004
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ07",
+  "Column2": "Střední Morava",
+  "Column3": 1210641,
+  "Column4": 593303,
+  "Column5": 617338,
+  "Column6": 43.254596118915515,
+  "Column7": 41.62950044075287,
+  "Column8": 44.81642147413572
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ08",
+  "Column2": "Moravskoslezsko",
+  "Column3": 1192834,
+  "Column4": 584073,
+  "Column5": 608761,
+  "Column6": 43.001031157730246,
+  "Column7": 41.34596274780721,
+  "Column8": 44.58897909031623
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Kraje (Regions-NUTS 3)"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ010",
+  "Column2": "Hlavní město Praha",
+  "Column3": 1335084,
+  "Column4": 653654,
+  "Column5": 681430,
+  "Column6": 41.96836303932936,
+  "Column7": 40.529789460479094,
+  "Column8": 43.34829843124019
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ020",
+  "Column2": "Středočeský kraj",
+  "Column3": 1397997,
+  "Column4": 691986,
+  "Column5": 706011,
+  "Column6": 41.37824938107879,
+  "Column7": 40.17278673267956,
+  "Column8": 42.559765357763546
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ031",
+  "Column2": "Jihočeský kraj",
+  "Column3": 643551,
+  "Column4": 318048,
+  "Column5": 325503,
+  "Column6": 42.961116523787545,
+  "Column7": 41.65793213602978,
+  "Column8": 44.23445406033124
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ032",
+  "Column2": "Plzeňský kraj",
+  "Column3": 591041,
+  "Column4": 293818,
+  "Column5": 297223,
+  "Column6": 42.926638761101174,
+  "Column7": 41.70375538598724,
+  "Column8": 44.135512729499396
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ041",
+  "Column2": "Karlovarský kraj",
+  "Column3": 293311,
+  "Column4": 145013,
+  "Column5": 148298,
+  "Column6": 43.283836951222426,
+  "Column7": 41.935712660244256,
+  "Column8": 44.60209847739012
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ042",
+  "Column2": "Ústecký kraj",
+  "Column3": 817004,
+  "Column4": 405277,
+  "Column5": 411727,
+  "Column6": 42.378994472487285,
+  "Column7": 41.01845774618347,
+  "Column8": 43.7182174110515
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ051",
+  "Column2": "Liberecký kraj",
+  "Column3": 442476,
+  "Column4": 217847,
+  "Column5": 224629,
+  "Column6": 42.42756669288278,
+  "Column7": 40.9866121635827,
+  "Column8": 43.825015915131175
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ052",
+  "Column2": "Královéhradecký kraj",
+  "Column3": 550803,
+  "Column4": 271680,
+  "Column5": 279123,
+  "Column6": 43.41536720025127,
+  "Column7": 41.92035851001178,
+  "Column8": 44.870510491790355
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ053",
+  "Column2": "Pardubický kraj",
+  "Column3": 522856,
+  "Column4": 259789,
+  "Column5": 263067,
+  "Column6": 42.691754517496214,
+  "Column7": 41.26233404801589,
+  "Column8": 44.10336340171895
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ063",
+  "Column2": "Kraj Vysočina",
+  "Column3": 508852,
+  "Column4": 253153,
+  "Column5": 255699,
+  "Column6": 43.0278234142737,
+  "Column7": 41.6626012727481,
+  "Column8": 44.37945201193591
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ064",
+  "Column2": "Jihomoravský kraj",
+  "Column3": 1195327,
+  "Column4": 587462,
+  "Column5": 607865,
+  "Column6": 42.592393964162106,
+  "Column7": 41.07960344669102,
+  "Column8": 44.05440763985425
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ071",
+  "Column2": "Olomoucký kraj",
+  "Column3": 630522,
+  "Column4": 308718,
+  "Column5": 321804,
+  "Column6": 43.10978839754997,
+  "Column7": 41.55356668545404,
+  "Column8": 44.602727125828146
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ072",
+  "Column2": "Zlínský kraj",
+  "Column3": 580119,
+  "Column4": 284585,
+  "Column5": 295534,
+  "Column6": 43.411985299567846,
+  "Column7": 41.711873429731014,
+  "Column8": 45.04911110058403
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ080",
+  "Column2": "Moravskoslezský kraj",
+  "Column3": 1192834,
+  "Column4": 584073,
+  "Column5": 608761,
+  "Column6": 43.001031157730246,
+  "Column7": 41.34596274780721,
+  "Column8": 44.58897909031623
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Okresy (Districts-LAU 1)"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Středočeský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0201",
+  "Column2": "Benešov",
+  "Column3": 99742,
+  "Column4": 49336,
+  "Column5": 50406,
+  "Column6": 42.642668083655835,
+  "Column7": 41.40112696610994,
+  "Column8": 43.85785422370353
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0202",
+  "Column2": "Beroun",
+  "Column3": 96403,
+  "Column4": 47682,
+  "Column5": 48721,
+  "Column6": 41.34648817982843,
+  "Column7": 40.11616542930246,
+  "Column8": 42.55057367459617
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0203",
+  "Column2": "Kladno",
+  "Column3": 166845,
+  "Column4": 81824,
+  "Column5": 85021,
+  "Column6": 42.03523929395547,
+  "Column7": 40.67012123582323,
+  "Column8": 43.349025534867856
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0204",
+  "Column2": "Kolín",
+  "Column3": 103932,
+  "Column4": 51749,
+  "Column5": 52183,
+  "Column6": 41.89923219027826,
+  "Column7": 40.44187327291348,
+  "Column8": 43.3444704214016
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0205",
+  "Column2": "Kutná Hora",
+  "Column3": 76310,
+  "Column4": 37888,
+  "Column5": 38422,
+  "Column6": 43.302778141790064,
+  "Column7": 41.95552681587838,
+  "Column8": 44.631304981521005
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0206",
+  "Column2": "Mělník",
+  "Column3": 109987,
+  "Column4": 54555,
+  "Column5": 55432,
+  "Column6": 41.58048223881004,
+  "Column7": 40.28095499954175,
+  "Column8": 42.85944941550007
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0207",
+  "Column2": "Mladá Boleslav",
+  "Column3": 131042,
+  "Column4": 66463,
+  "Column5": 64579,
+  "Column6": 41.751209535874,
+  "Column7": 40.61601943938733,
+  "Column8": 42.9195171805076
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0208",
+  "Column2": "Nymburk",
+  "Column3": 101539,
+  "Column4": 49872,
+  "Column5": 51667,
+  "Column6": 41.45281615930825,
+  "Column7": 40.21537135065768,
+  "Column8": 42.64727001761279
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0209",
+  "Column2": "Praha-východ",
+  "Column3": 188939,
+  "Column4": 93450,
+  "Column5": 95489,
+  "Column6": 38.83913061887699,
+  "Column7": 37.90548956661316,
+  "Column8": 39.7528354051252
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ020A",
+  "Column2": "Praha-západ",
+  "Column3": 152285,
+  "Column4": 74616,
+  "Column5": 77669,
+  "Column6": 39.2214761795318,
+  "Column7": 38.359641363782565,
+  "Column8": 40.04943413717184
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ020B",
+  "Column2": "Příbram",
+  "Column3": 115236,
+  "Column4": 56832,
+  "Column5": 58404,
+  "Column6": 43.08466104342393,
+  "Column7": 41.661915822072075,
+  "Column8": 44.469111704677765
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ020C",
+  "Column2": "Rakovník",
+  "Column3": 55737,
+  "Column4": 27719,
+  "Column5": 28018,
+  "Column6": 43.15764214076825,
+  "Column7": 41.79586204408528,
+  "Column8": 44.504889713755446
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Jihočeský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0311",
+  "Column2": "České Budějovice",
+  "Column3": 196602,
+  "Column4": 96333,
+  "Column5": 100269,
+  "Column6": 42.1968901638844,
+  "Column7": 40.89797369541071,
+  "Column8": 43.4448184384007
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0312",
+  "Column2": "Český Krumlov",
+  "Column3": 61320,
+  "Column4": 30943,
+  "Column5": 30377,
+  "Column6": 41.966014350945855,
+  "Column7": 40.92772194034192,
+  "Column8": 43.02365276360404
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0313",
+  "Column2": "Jindřichův Hradec",
+  "Column3": 90279,
+  "Column4": 44524,
+  "Column5": 45755,
+  "Column6": 43.72597724830802,
+  "Column7": 42.40110951396999,
+  "Column8": 45.01520052453284
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0314",
+  "Column2": "Písek",
+  "Column3": 71588,
+  "Column4": 35327,
+  "Column5": 36261,
+  "Column6": 43.78820472704923,
+  "Column7": 42.4386588162029,
+  "Column8": 45.102989437687874
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0315",
+  "Column2": "Prachatice",
+  "Column3": 50779,
+  "Column4": 25477,
+  "Column5": 25302,
+  "Column6": 42.7932314539475,
+  "Column7": 41.56072143501982,
+  "Column8": 44.034266065923646
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0316",
+  "Column2": "Strakonice",
+  "Column3": 70532,
+  "Column4": 34888,
+  "Column5": 35644,
+  "Column6": 43.382592298531165,
+  "Column7": 41.90710272873194,
+  "Column8": 44.826787117046344
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0317",
+  "Column2": "Tábor",
+  "Column3": 102451,
+  "Column4": 50556,
+  "Column5": 51895,
+  "Column6": 43.564381997247466,
+  "Column7": 42.22992325342195,
+  "Column8": 44.86440890259177
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Plzeňský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0321",
+  "Column2": "Domažlice",
+  "Column3": 55268,
+  "Column4": 27525,
+  "Column5": 27743,
+  "Column6": 42.69416298762394,
+  "Column7": 41.641398728428705,
+  "Column8": 43.738654795804344
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0322",
+  "Column2": "Klatovy",
+  "Column3": 86253,
+  "Column4": 42751,
+  "Column5": 43502,
+  "Column6": 44.010811218160526,
+  "Column7": 42.706217398423426,
+  "Column8": 45.292883085835136
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0323",
+  "Column2": "Plzeň-město",
+  "Column3": 194840,
+  "Column4": 95417,
+  "Column5": 99423,
+  "Column6": 43.10031307739684,
+  "Column7": 41.64984751144974,
+  "Column8": 44.492335777435805
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0324",
+  "Column2": "Plzeň-jih",
+  "Column3": 70131,
+  "Column4": 35506,
+  "Column5": 34625,
+  "Column6": 42.87672356019449,
+  "Column7": 41.85270095195178,
+  "Column8": 43.92680144404332
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0325",
+  "Column2": "Plzeň-sever",
+  "Column3": 80671,
+  "Column4": 40398,
+  "Column5": 40273,
+  "Column6": 42.098294306504194,
+  "Column7": 41.098470221298086,
+  "Column8": 43.10122166215579
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0326",
+  "Column2": "Rokycany",
+  "Column3": 49489,
+  "Column4": 24786,
+  "Column5": 24703,
+  "Column6": 43.06131665622664,
+  "Column7": 41.797425966271284,
+  "Column8": 44.32945391248027
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0327",
+  "Column2": "Tachov",
+  "Column3": 54389,
+  "Column4": 27435,
+  "Column5": 26954,
+  "Column6": 41.99180900549744,
+  "Column7": 41.0055950428285,
+  "Column8": 42.99562217110633
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Karlovarský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0411",
+  "Column2": "Cheb",
+  "Column3": 91434,
+  "Column4": 45185,
+  "Column5": 46249,
+  "Column6": 43.06468053459326,
+  "Column7": 41.614706207812326,
+  "Column8": 44.481296892905796
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0412",
+  "Column2": "Karlovy Vary",
+  "Column3": 114374,
+  "Column4": 56215,
+  "Column5": 58159,
+  "Column6": 44.049320649798034,
+  "Column7": 42.69795428266477,
+  "Column8": 45.3555167729844
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0413",
+  "Column2": "Sokolov",
+  "Column3": 87503,
+  "Column4": 43613,
+  "Column5": 43890,
+  "Column6": 42.512285293075664,
+  "Column7": 41.28579781257882,
+  "Column8": 43.73103212576897
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Ústecký kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0421",
+  "Column2": "Děčín",
+  "Column3": 128449,
+  "Column4": 63444,
+  "Column5": 65005,
+  "Column6": 42.69484776058981,
+  "Column7": 41.285480108442094,
+  "Column8": 44.070371509883856
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0422",
+  "Column2": "Chomutov",
+  "Column3": 124600,
+  "Column4": 62271,
+  "Column5": 62329,
+  "Column6": 41.96417335473515,
+  "Column7": 40.757535610476786,
+  "Column8": 43.169688267098785
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0423",
+  "Column2": "Litoměřice",
+  "Column3": 119177,
+  "Column4": 59165,
+  "Column5": 60012,
+  "Column6": 42.543506716900076,
+  "Column7": 41.19272373869686,
+  "Column8": 43.875224955008996
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0424",
+  "Column2": "Louny",
+  "Column3": 86364,
+  "Column4": 42717,
+  "Column5": 43647,
+  "Column6": 42.283914594043814,
+  "Column7": 41.06612121637755,
+  "Column8": 43.47576007514835
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0425",
+  "Column2": "Most",
+  "Column3": 110933,
+  "Column4": 55121,
+  "Column5": 55812,
+  "Column6": 42.45471140237801,
+  "Column7": 40.977259120843236,
+  "Column8": 43.913871568838246
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0426",
+  "Column2": "Teplice",
+  "Column3": 128830,
+  "Column4": 64390,
+  "Column5": 64440,
+  "Column6": 42.44689125203757,
+  "Column7": 41.09649013822022,
+  "Column8": 43.796244568590936
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0427",
+  "Column2": "Ústí nad Labem",
+  "Column3": 118651,
+  "Column4": 58169,
+  "Column5": 60482,
+  "Column6": 42.232130365525784,
+  "Column7": 40.74695284429851,
+  "Column8": 43.66051056512681
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Liberecký kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0511",
+  "Column2": "Česká Lípa",
+  "Column3": 102998,
+  "Column4": 50832,
+  "Column5": 52166,
+  "Column6": 42.073360647779566,
+  "Column7": 40.68909348441926,
+  "Column8": 43.422229038070775
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0512",
+  "Column2": "Jablonec nad Nisou",
+  "Column3": 91533,
+  "Column4": 44817,
+  "Column5": 46716,
+  "Column6": 42.8137556946675,
+  "Column7": 41.20988687328469,
+  "Column8": 44.35242743385564
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0513",
+  "Column2": "Liberec",
+  "Column3": 175465,
+  "Column4": 86160,
+  "Column5": 89305,
+  "Column6": 41.99686832131764,
+  "Column7": 40.641480965645314,
+  "Column8": 43.304523822854264
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0514",
+  "Column2": "Semily",
+  "Column3": 72480,
+  "Column4": 36038,
+  "Column5": 36442,
+  "Column6": 43.48587196467991,
+  "Column7": 41.95374327099173,
+  "Column8": 45.001015312002636
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Královéhradecký kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0521",
+  "Column2": "Hradec Králové",
+  "Column3": 164435,
+  "Column4": 80335,
+  "Column5": 84100,
+  "Column6": 43.4805211785812,
+  "Column7": 41.89085081222381,
+  "Column8": 44.99902497027348
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0522",
+  "Column2": "Jičín",
+  "Column3": 80134,
+  "Column4": 39844,
+  "Column5": 40290,
+  "Column6": 43.3398931789253,
+  "Column7": 41.93000200783054,
+  "Column8": 44.734177215189874
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0523",
+  "Column2": "Náchod",
+  "Column3": 109487,
+  "Column4": 53981,
+  "Column5": 55506,
+  "Column6": 43.611182149478935,
+  "Column7": 42.07249773068302,
+  "Column8": 45.10759197203906
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0524",
+  "Column2": "Rychnov nad Kněžnou",
+  "Column3": 79333,
+  "Column4": 39565,
+  "Column5": 39768,
+  "Column6": 42.830404749599786,
+  "Column7": 41.51289018071528,
+  "Column8": 44.14119392476363
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0525",
+  "Column2": "Trutnov",
+  "Column3": 117414,
+  "Column4": 57955,
+  "Column5": 59459,
+  "Column6": 43.5882773774848,
+  "Column7": 42.091096540419294,
+  "Column8": 45.047587413175464
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Pardubický kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0531",
+  "Column2": "Chrudim",
+  "Column3": 104708,
+  "Column4": 52080,
+  "Column5": 52628,
+  "Column6": 42.91015968216373,
+  "Column7": 41.45483870967742,
+  "Column8": 44.35032682222391
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0532",
+  "Column2": "Pardubice",
+  "Column3": 176137,
+  "Column4": 87707,
+  "Column5": 88430,
+  "Column6": 42.59341024316299,
+  "Column7": 41.09687368169017,
+  "Column8": 44.07771118398733
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0533",
+  "Column2": "Svitavy",
+  "Column3": 104000,
+  "Column4": 51419,
+  "Column5": 52581,
+  "Column6": 42.73803846153846,
+  "Column7": 41.3993951652113,
+  "Column8": 44.0470987619102
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0534",
+  "Column2": "Ústí nad Orlicí",
+  "Column3": 138011,
+  "Column4": 68583,
+  "Column5": 69428,
+  "Column6": 42.61668635108796,
+  "Column7": 41.22499015791085,
+  "Column8": 43.99144437402777
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Kraj Vysočina"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0631",
+  "Column2": "Havlíčkův Brod",
+  "Column3": 94612,
+  "Column4": 46986,
+  "Column5": 47626,
+  "Column6": 43.23789794106456,
+  "Column7": 41.93891797556719,
+  "Column8": 44.519422164364
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0632",
+  "Column2": "Jihlava",
+  "Column3": 113664,
+  "Column4": 56593,
+  "Column5": 57071,
+  "Column6": 42.4845069679054,
+  "Column7": 41.12820490166629,
+  "Column8": 43.82944928247271
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0633",
+  "Column2": "Pelhřimov",
+  "Column3": 72298,
+  "Column4": 36040,
+  "Column5": 36258,
+  "Column6": 43.811225760048686,
+  "Column7": 42.386098779134294,
+  "Column8": 45.22778421313917
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0634",
+  "Column2": "Třebíč",
+  "Column3": 110337,
+  "Column4": 54793,
+  "Column5": 55544,
+  "Column6": 43.383457045234145,
+  "Column7": 41.98663150402424,
+  "Column8": 44.761396370445055
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0635",
+  "Column2": "Žďár nad Sázavou",
+  "Column3": 117941,
+  "Column4": 58741,
+  "Column5": 59200,
+  "Column6": 42.56998414461468,
+  "Column7": 41.21028753340937,
+  "Column8": 43.919138513513516
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Jihomoravský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0641",
+  "Column2": "Blansko",
+  "Column3": 109104,
+  "Column4": 53751,
+  "Column5": 55353,
+  "Column6": 42.73239294617979,
+  "Column7": 41.31600342319213,
+  "Column8": 44.107790002348565
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0642",
+  "Column2": "Brno-město",
+  "Column3": 382405,
+  "Column4": 185967,
+  "Column5": 196438,
+  "Column6": 42.91895372706947,
+  "Column7": 41.144458425419565,
+  "Column8": 44.59886070923141
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0643",
+  "Column2": "Brno-venkov",
+  "Column3": 226442,
+  "Column4": 112072,
+  "Column5": 114370,
+  "Column6": 41.155006580051406,
+  "Column7": 39.921139981440504,
+  "Column8": 42.364081489901196
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0644",
+  "Column2": "Břeclav",
+  "Column3": 116482,
+  "Column4": 57390,
+  "Column5": 59092,
+  "Column6": 43.017582115691695,
+  "Column7": 41.51831329499913,
+  "Column8": 44.47366817843363
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0645",
+  "Column2": "Hodonín",
+  "Column3": 153607,
+  "Column4": 75793,
+  "Column5": 77814,
+  "Column6": 43.83357854785264,
+  "Column7": 42.18177800060692,
+  "Column8": 45.44247821728738
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0646",
+  "Column2": "Vyškov",
+  "Column3": 92735,
+  "Column4": 45894,
+  "Column5": 46841,
+  "Column6": 42.0080606027929,
+  "Column7": 40.73321131302567,
+  "Column8": 43.25713584253111
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0647",
+  "Column2": "Znojmo",
+  "Column3": 114552,
+  "Column4": 56595,
+  "Column5": 57957,
+  "Column6": 42.58662441511279,
+  "Column7": 41.295989044968636,
+  "Column8": 43.84692962023569
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Olomoucký kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0711",
+  "Column2": "Jeseník",
+  "Column3": 37709,
+  "Column4": 18705,
+  "Column5": 19004,
+  "Column6": 44.13571030788406,
+  "Column7": 42.738011226944664,
+  "Column8": 45.511418648705536
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0712",
+  "Column2": "Olomouc",
+  "Column3": 235441,
+  "Column4": 114600,
+  "Column5": 120841,
+  "Column6": 42.5150653454581,
+  "Column7": 40.9820942408377,
+  "Column8": 43.968864044488214
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0713",
+  "Column2": "Prostějov",
+  "Column3": 108504,
+  "Column4": 53011,
+  "Column5": 55493,
+  "Column6": 43.09413477844135,
+  "Column7": 41.52022221803022,
+  "Column8": 44.597651956102574
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0714",
+  "Column2": "Přerov",
+  "Column3": 128901,
+  "Column4": 63420,
+  "Column5": 65481,
+  "Column6": 43.658966959139185,
+  "Column7": 42.00329549038158,
+  "Column8": 45.26252653441456
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0715",
+  "Column2": "Šumperk",
+  "Column3": 119967,
+  "Column4": 58982,
+  "Column5": 60985,
+  "Column6": 43.3785666058166,
+  "Column7": 41.834695330778885,
+  "Column8": 44.871730753463964
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Zlínský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0721",
+  "Column2": "Kroměříž",
+  "Column3": 104826,
+  "Column4": 51278,
+  "Column5": 53548,
+  "Column6": 43.531385343330854,
+  "Column7": 41.85145676508444,
+  "Column8": 45.14009860312243
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0722",
+  "Column2": "Uherské Hradiště",
+  "Column3": 141630,
+  "Column4": 69610,
+  "Column5": 72020,
+  "Column6": 43.58707194803361,
+  "Column7": 41.948024709093524,
+  "Column8": 45.171271868925295
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0723",
+  "Column2": "Vsetín",
+  "Column3": 141896,
+  "Column4": 69803,
+  "Column5": 72093,
+  "Column6": 43.07788098325534,
+  "Column7": 41.35261378450783,
+  "Column8": 44.748345886563186
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0724",
+  "Column2": "Zlín",
+  "Column3": 191767,
+  "Column4": 93894,
+  "Column5": 97873,
+  "Column6": 43.46462373609641,
+  "Column7": 41.72765032909451,
+  "Column8": 45.13098096512828
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "Moravskoslezský kraj"
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0801",
+  "Column2": "Bruntál",
+  "Column3": 90971,
+  "Column4": 45001,
+  "Column5": 45970,
+  "Column6": 43.56858229545679,
+  "Column7": 41.9646563409702,
+  "Column8": 45.13869915162062
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0802",
+  "Column2": "Frýdek-Místek",
+  "Column3": 214587,
+  "Column4": 105788,
+  "Column5": 108799,
+  "Column6": 42.60262970263809,
+  "Column7": 41.13992135213824,
+  "Column8": 44.02485776523681
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0803",
+  "Column2": "Karviná",
+  "Column3": 242779,
+  "Column4": 118488,
+  "Column5": 124291,
+  "Column6": 43.658922312061584,
+  "Column7": 41.86150496252785,
+  "Column8": 45.372420368329166
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0804",
+  "Column2": "Nový Jičín",
+  "Column3": 151398,
+  "Column4": 74646,
+  "Column5": 76752,
+  "Column6": 42.35627947529029,
+  "Column7": 40.89515848136538,
+  "Column8": 43.777308734625805
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0805",
+  "Column2": "Opava",
+  "Column3": 175777,
+  "Column4": 86074,
+  "Column5": 89703,
+  "Column6": 42.749332961650275,
+  "Column7": 41.164579315472736,
+  "Column8": 44.269974248352895
+ },
+ {
+  "Počet obyvatel v regionech soudržnosti, krajích a okresech České republiky k 1. 1. 2021": "CZ0806",
+  "Column2": "Ostrava-město",
+  "Column3": 317322,
+  "Column4": 154076,
+  "Column5": 163246,
+  "Column6": 43.051439862348026,
+  "Column7": 41.22999688465433,
+  "Column8": 44.77056711956189
+ }
+]
+}
