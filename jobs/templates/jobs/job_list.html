@@ -3,6 +3,14 @@
 <head>
     <title>Job Listings</title>
     <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
         .searchbox-container {
             width: 100%;
             max-width: 500px;
@@ -74,6 +82,75 @@
         }
         .matched-list li.selected, .matched-list li:hover {
             background: #f0f0f0;
+        }
+
+        ul.results {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        ul.results li {
+            border: 1px solid #e0e0e0;
+            margin-bottom: 16px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        ul.results li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        ul.results li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul.results li strong {
+            font-size: 1.2em;
+            color: #2563eb;
+        }
+
+        .pagination {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .pagination span {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .pagination div {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pagination a {
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #2563eb;
+            transition: background-color 0.2s;
+        }
+
+        .pagination a:hover {
+            background-color: #f3f4f6;
+        }
+
+        .pagination strong {
+            padding: 8px 12px;
+            background-color: #2563eb;
+            color: white;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -243,7 +320,7 @@
         }
     })();
     </script>
-    <ul>
+    <ul class="results">
         {% for job in jobs %}
             <li>
                 <a href="{% url 'job_detail' job.pk %}" target="_blank">
