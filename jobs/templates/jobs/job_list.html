@@ -11,6 +11,17 @@
             padding: 20px;
         }
 
+        form#job-search-form {
+            margin: 0 auto; 
+            max-width: 800px; 
+            }
+
+        .searchboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
         .searchbox-container {
             width: 100%;
             max-width: 500px;
@@ -155,8 +166,12 @@
     </style>
 </head>
 <body>
-    <h1>Job Listings</h1>
+    <header>
+        <h1>Job Listings</h1>
+    </header>
+
     <form method="get" autocomplete="off" id="job-search-form">
+        <div class="searchboxes">
         <input type="text" name="q" placeholder="Keyword" value="{{ query }}">
         <div class="searchbox-container" id="location-searchbox">
             <label class="searchbox-label" for="location-input">Location(s):</label>
@@ -165,6 +180,8 @@
             <ul id="location-suggestions" class="matched-list" style="display:none;"></ul>
         </div>
         <input type="hidden" name="locations" id="locations-hidden">
+        </div>
+
         <button type="submit">Search</button>
     </form>
     <script>
