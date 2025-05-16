@@ -75,21 +75,24 @@ class RestructuredOffer:
         self.municipality = locations.get("municipality")
         self.cityPart = locations.get("cityPart")
         self.profession = item["profeseCzIsco"]["id"].split("/")[1] if item.get("profeseCzIsco") and item["profeseCzIsco"].get("id") else None
+        
         upresnujici = item.get("upresnujiciInformace")
         upresnujici_cs = ""
         if isinstance(upresnujici, dict):
             upresnujici_cs = upresnujici.get("cs") or ""
+        
         self.textToSearch = item["pozadovanaProfese"]["cs"] + "\n" + upresnujici_cs
         self.education = item.get("minPozadovaneVzdelani", {}).get("id", "/").split("/")[1] if item.get("minPozadovaneVzdelani") and item["minPozadovaneVzdelani"].get("id") else None
         self.shifts = item.get("smennost", {}).get("id", "/").split("/")[1] if item.get("smennost") and item["smennost"].get("id") else None
         self.hours = item.get("pocetHodinTydne")
+        
         vztahy = item.get("pracovnePravniVztahy", {})
-
         vztahy_id = None
         if isinstance(vztahy, dict):
             vztahy_id = vztahy.get("id", "").split("/")[1] if vztahy.get("id") else None
         elif isinstance(vztahy, list) and vztahy:
             vztahy_id = vztahy[0].get("id", "").split("/")[1] if isinstance(vztahy[0], dict) and vztahy[0].get("id") else None
+        
         self.fullTime = vztahy_id == "plny"
         self.partTime = vztahy_id == "zkraceny"
         self.freelanceWork = vztahy_id == "dpp"
@@ -101,7 +104,25 @@ class RestructuredOffer:
         self.nonEUnational = item.get("cizinecMimoEu", False)
         self.blueCard = item.get("modraKarta", False)
         self.employeeCard = item.get("zamestnaneckaKarta", False)
-        self.displayInformation = {}
+       
+        upresnujici_informace = item.get("upresnujiciInformace") or {}
+        misto_vykonu = item.get("mistoVykonuPrace") or {}
+        pracoviste_list = misto_vykonu.get("pracoviste") or [{}]
+        if not isinstance(pracoviste_list, list) or not pracoviste_list:
+            pracoviste_list = [{}]
+        pracoviste = pracoviste_list[0] if isinstance(pracoviste_list[0], dict) else {}
+
+        self.displayInformation = {
+            "archived": False,
+            "keywords": [],
+            "label": item["pozadovanaProfese"]["cs"],
+            "description": upresnujici_informace.get("cs", None),
+            "location": pracoviste.get("adresa"),
+            "locationName": pracoviste.get("nazev"),
+            "wageType": item.get("typMzdy", {}).get("id", "").split("/")[1] if item.get("typMzdy") else None,
+            "minWage": item.get("mesicniMzdaOd"),
+            "maxWage": item.get("mesicniMzdaDo")
+        }
     def to_dict(self):
         return self.__dict__
 
@@ -109,7 +130,7 @@ def restructure(data):
     return [RestructuredOffer(item).to_dict() for item in data]
 
 def main():
-    with open("volna-mista.json", encoding="utf-8") as f:
+    with open("../0temporary/volna-mista.json", encoding="utf-8") as f:
         data = json.load(f)["polozky"]
     print("loaded data")
     offers = restructure(data)
@@ -120,3 +141,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+

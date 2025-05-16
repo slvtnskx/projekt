@@ -172,7 +172,10 @@
 
     <form method="get" autocomplete="off" id="job-search-form">
         <div class="searchboxes">
-        <input type="text" name="q" placeholder="Keyword" value="{{ query }}">
+        <div class="searchbox-container" id="keyword-searchbox">
+            <label class="searchbox-label" for="keyword-input">Keyword(s):</label>
+            <input type="text" id="keyword-input" name="q" class="searchbox-input" placeholder="Keyword" value="{{ query }}">
+        </div>
         <div class="searchbox-container" id="location-searchbox">
             <label class="searchbox-label" for="location-input">Location(s):</label>
             <ul class="selected-list" id="selected-locations"></ul>

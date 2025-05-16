@@ -28,7 +28,7 @@ def job_list(request):
     }
     return render(request, 'jobs/job_list.html', context)
 
-def job_detail(request, pk):
+def job_detail(request, pk): 
     job = get_object_or_404(JobOffer, pk=pk)
     return render(request, 'jobs/job_detail.html', {'job': job})
 

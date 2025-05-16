@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ job.title }} at {{ job.company }}</title>
+    <title>{{ job.displayInformation.label }}</title>
     <style>
         body {
             font-family: "Segoe UI", sans-serif;
@@ -13,11 +13,27 @@
      </style>
 </head>
 <body>
-    <h1>{{ job.title }}</h1>
-    <h2>Company: {{ job.company }}</h2>
-    <p><strong>Location:</strong> {{ job.location }}</p>
-    <p><strong>Date Posted:</strong> {{ job.date_posted }}</p>
-    <p>{{ job.description }}</p>
+    <h1>{{ job.displayInformation.label }}</h1>
+    <div>
+        {% if job.displayInformation.description %}
+            <p><strong>Description:</strong> {{ job.displayInformation.description }}</p>
+        {% endif %}
+        {% if job.displayInformation.locationName %}
+            <p><strong>Location Name:</strong> {{ job.displayInformation.locationName }}</p>
+        {% endif %}
+        {% if job.displayInformation.location %}
+            <p><strong>Location:</strong> {{ job.displayInformation.location }}</p>
+        {% endif %}
+        {% if job.displayInformation.wageType %}
+            <p><strong>Wage Type:</strong> {{ job.displayInformation.wageType }}</p>
+        {% endif %}
+        {% if job.displayInformation.minWage %}
+            <p><strong>Min Wage:</strong> {{ job.displayInformation.minWage }}</p>
+        {% endif %}
+        {% if job.displayInformation.maxWage %}
+            <p><strong>Max Wage:</strong> {{ job.displayInformation.maxWage }}</p>
+        {% endif %}
+    </div>
     <a href="/">Back to listings</a>
 </body>
 </html>
