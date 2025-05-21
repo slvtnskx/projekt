@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Job Listings</title>
+    <title>Nabídky práce</title>
     <style>
         body {
             font-family: "Segoe UI", sans-serif;
@@ -18,7 +18,7 @@
 
         .searchboxes {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 16px;
         }
 
@@ -167,25 +167,25 @@
 </head>
 <body>
     <header>
-        <h1>Job Listings</h1>
+        <h1>Nabídky práce</h1>
     </header>
 
     <form method="get" autocomplete="off" id="job-search-form">
         <div class="searchboxes">
         <div class="searchbox-container" id="keyword-searchbox">
-            <label class="searchbox-label" for="keyword-input">Keyword(s):</label>
-            <input type="text" id="keyword-input" name="q" class="searchbox-input" placeholder="Keyword" value="{{ query }}">
+            <label class="searchbox-label" for="keyword-input">Klíčová slova:</label>
+            <input type="text" id="keyword-input" name="q" class="searchbox-input" placeholder="Klíčové slovo" value="{{ query }}">
         </div>
         <div class="searchbox-container" id="location-searchbox">
-            <label class="searchbox-label" for="location-input">Location(s):</label>
+            <label class="searchbox-label" for="location-input">Místa:</label>
             <ul class="selected-list" id="selected-locations"></ul>
-            <input type="text" id="location-input" class="searchbox-input" placeholder="Enter region, district, city or part" autocomplete="off">
+            <input type="text" id="location-input" class="searchbox-input" placeholder="Kraj, okres, město, obec, část obce" autocomplete="off">
             <ul id="location-suggestions" class="matched-list" style="display:none;"></ul>
         </div>
         <input type="hidden" name="locations" id="locations-hidden">
         </div>
 
-        <button type="submit">Search</button>
+        <button type="submit">Hledat</button>
     </form>
     <script>
 
@@ -267,7 +267,7 @@
     function renderSuggestions() {
         suggestions.innerHTML = '';
         if (!locationMatches.length) {
-            suggestions.innerHTML = '<li style="color:#888;">No results</li>';
+            suggestions.innerHTML = '<li style="color:#888;">Žádné výsledky</li>';
         } else {
             locationMatches.forEach((loc, i) => {
                 const li = document.createElement('li');
@@ -344,24 +344,24 @@
         {% for job in jobs %}
             <li>
                 <a href="{% url 'job_detail' job.pk %}" target="_blank">
-                    <strong>{{ job.title }}</strong> at {{ job.company }}
+                    <strong>{{ job.display_information.label }}</strong>
                 </a><br>
-                Location: {{ job.location }}<br>
-                Posted: {{ job.date_posted }}<br>
-                <p>{{ job.description|truncatewords:30 }}</p>
+                Místo: {{ job.display_information.locationName }}<br>
+                Datum: {{ job.date_posted }}<br>
+                <p>{{ job.display_information.description|linebreaksbr|truncatewords:30 }}</p>
             </li>
         {% empty %}
-            <li>No job offers found.</li>
+            <li>Nic nenalezeno</li>
         {% endfor %}
     </ul>
     <div class="pagination">
         <span>
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            Stránka {{ page_obj.number }} z {{ page_obj.paginator.num_pages }}
         </span>
         <div>
             {% if page_obj.has_previous %}
-                <a href="?q={{ query }}&location={{ location }}&page=1">First</a>
-                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.previous_page_number }}">Previous</a>
+                <a href="?q={{ query }}&location={{ location }}&page=1">První</a>
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.previous_page_number }}">Minulá</a>
             {% endif %}
             {% for num in page_obj.paginator.page_range %}
                 {% if page_obj.number == num %}
@@ -371,8 +371,8 @@
                 {% endif %}
             {% endfor %}
             {% if page_obj.has_next %}
-                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.next_page_number }}">Next</a>
-                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.paginator.num_pages }}">Last</a>
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.next_page_number }}">Další</a>
+                <a href="?q={{ query }}&location={{ location }}&page={{ page_obj.paginator.num_pages }}">Poslední</a>
             {% endif %}
         </div>
     </div>

@@ -1,39 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ job.displayInformation.label }}</title>
+    <title>{{ job.display_information.label }}</title>
     <style>
         body {
             font-family: "Segoe UI", sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #f4f6fb;
+            color: #222;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-     </style>
+        .container {
+            max-width: 600px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 36px 28px 36px;
+        }
+        h1 {
+            font-size: 2.1rem;
+            margin-bottom: 12px;
+            color: #2a3b5d;
+            letter-spacing: 0.5px;
+        }
+        .location, .wage, .description {
+            margin-bottom: 18px;
+        }
+        .location p {
+            font-size: 1.08rem;
+            color: #4b5c6b;
+            margin: 0;
+        }
+        .wage {
+            font-size: 1.1rem;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+        .wage span {
+            margin-right: 4px;
+        }
+        .description p {
+            font-size: 1.07rem;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 18px;
+            text-decoration: none;
+            color: #1976d2;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+        a:hover {
+            color: #0d47a1;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{ job.displayInformation.label }}</h1>
-    <div>
-        {% if job.displayInformation.description %}
-            <p><strong>Description:</strong> {{ job.displayInformation.description }}</p>
-        {% endif %}
-        {% if job.displayInformation.locationName %}
-            <p><strong>Location Name:</strong> {{ job.displayInformation.locationName }}</p>
-        {% endif %}
-        {% if job.displayInformation.location %}
-            <p><strong>Location:</strong> {{ job.displayInformation.location }}</p>
-        {% endif %}
-        {% if job.displayInformation.wageType %}
-            <p><strong>Wage Type:</strong> {{ job.displayInformation.wageType }}</p>
-        {% endif %}
-        {% if job.displayInformation.minWage %}
-            <p><strong>Min Wage:</strong> {{ job.displayInformation.minWage }}</p>
-        {% endif %}
-        {% if job.displayInformation.maxWage %}
-            <p><strong>Max Wage:</strong> {{ job.displayInformation.maxWage }}</p>
-        {% endif %}
+    <div class="container">
+        <h1>{{ job.display_information.label }}</h1>
+
+        <div class="location">
+            {% if job.display_information.locationName %}
+                <p>{{ job.display_information.locationName }}</p>
+            {% endif %}
+        </div>
+
+        <div class="wage">
+            {% if job.display_information.minWage %}
+                <span>{{ job.display_information.minWage }}</span>
+            {% endif %}
+            {% if job.display_information.maxWage %}
+                <span><span> - </span>{{ job.display_information.maxWage }}</span>
+            {% endif %}
+            {% if job.display_information.wageType %}
+                <span>{{ job.display_information.wageType }}</span>
+            {% endif %}
+        </div>
+
+        <div class="description">
+            {% if job.display_information.description %}
+                <p>{{ job.display_information.description|linebreaksbr }}</p>
+            {% endif %}
+        </div>
+        <a href="/">Zpět</a>
     </div>
-    <a href="/">Back to listings</a>
 </body>
 </html>
