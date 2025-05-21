@@ -63,6 +63,61 @@ def get_location_ids(item):
         }
     return {}
 
+def format_address(adresa):
+    if not isinstance(adresa, dict):
+        return None
+    parts = [
+        adresa.get("ulice"),
+        adresa.get("cisloPopisne"),
+        adresa.get("cisloOrientacni"),
+        adresa.get("obec"),
+        adresa.get("psc"),
+        adresa.get("stat")
+    ]
+    return ", ".join(str(p) for p in parts if p)
+
+def get_contact(item):
+    kontakt = item.get("prvniKontaktSeZamestnavatelem", {})
+    komu = kontakt.get("komuSeHlasit", {})
+    kde = kontakt.get("kdeSeHlasit", {})
+    def contact_name():
+        parts = [
+            komu.get("titulPredJmenem"),
+            komu.get("jmeno"),
+            komu.get("prijmeni"),
+            komu.get("titulZaJmenem")
+        ]
+        # Capitalize jmeno and prijmeni
+        def cap(s):
+            return " ".join(w.capitalize() for w in s.split()) if isinstance(s, str) else ""
+        name_parts = []
+        for i, part in enumerate(parts):
+            if not part:
+                continue
+            if i in (1, 2):
+                part = cap(part)
+            name_parts.append(part + (" " if i < 3 else ""))
+        return "".join(name_parts).strip() or None
+    return {
+        "contactName": contact_name(),
+        "contactPosition": komu.get("poziceVeSpolecnosti"),
+        "contactEmail": komu.get("email"),
+        "contactNumber": komu.get("telefon"),
+        "contactPlace": kde.get("mistoKontaktu"),
+        "contactPlaceAddress": format_address(kde.get("adresa")),
+        "contactPlaceEmail": kde.get("email"),
+        "contactPlaceNumber": kde.get("telefon"),
+        "workplaceEmail": (
+            item.get("mistoVykonuPrace", {}).get("pracoviste", [{}])[0].get("email")
+            if item.get("mistoVykonuPrace", {}).get("pracoviste") else None
+        ),
+        "workplaceNumber": (
+            item.get("mistoVykonuPrace", {}).get("pracoviste", [{}])[0].get("telefon")
+            if item.get("mistoVykonuPrace", {}).get("pracoviste") else None
+        ),
+        "labourOffice": item.get("kontaktniPracoviste", {}).get("id")
+    }
+
 class RestructuredOffer:
     def __init__(self, item):
         locations = get_location_ids(item)
@@ -117,11 +172,62 @@ class RestructuredOffer:
             "keywords": [],
             "label": item["pozadovanaProfese"]["cs"],
             "description": upresnujici_informace.get("cs", None),
-            "location": pracoviste.get("adresa"),
+            "location": format_address(pracoviste.get("adresa")),
             "locationName": pracoviste.get("nazev"),
+            "addressPlaceID": pracoviste.get("adresa", {}).get("kodAdresnihoMista") if isinstance(pracoviste.get("adresa"), dict) else None,
+            "isco": item.get("profeseCzIsco", {}).get("id"),
+            "iscoGroup": [],  # enums not available, leave empty
             "wageType": item.get("typMzdy", {}).get("id", "").split("/")[1] if item.get("typMzdy") else None,
             "minWage": item.get("mesicniMzdaOd"),
-            "maxWage": item.get("mesicniMzdaDo")
+            "maxWage": item.get("mesicniMzdaDo"),
+            "hours": item.get("pocetHodinTydne"),
+            "education": item.get("minPozadovaneVzdelani", {}).get("id", "/").split("/")[1] if item.get("minPozadovaneVzdelani") and item["minPozadovaneVzdelani"].get("id") else None,
+            "shifts": item.get("smennost", {}).get("id", "/").split("/")[1] if item.get("smennost") and item["smennost"].get("id") else None,
+            "employmentType": [
+                vztahy_id
+            ] if vztahy_id else None,
+            "benefits": [
+                {
+                    "description": v.get("popis"),
+                    "type": v.get("id")
+                } for v in (item.get("vyhodyVolnehoMista") or [])
+            ] if item.get("vyhodyVolnehoMista") else None,
+            "languages": [
+                {
+                    "lang": l.get("jazyk", {}).get("id"),
+                    "level": l.get("urovenZnalosti", {}).get("id")
+                } for l in (item.get("pozadovanaJazykovaZnalost") or [])
+            ] if item.get("pozadovanaJazykovaZnalost") else None,
+            "skills": [
+                {
+                    "description": s.get("popis"),
+                    "type": s.get("dovednost", {}).get("id")
+                } for s in (item.get("pozadovanaDovednost") or [])
+            ] if item.get("pozadovanaDovednost") else None,
+            "educationDetails": [
+                e.get("id") for e in (item.get("pozadovaneVzdelani") or [])
+            ] if item.get("pozadovaneVzdelani") else None,
+            "professionDetails": [
+                p.get("id") for p in (item.get("pozadovanePovolani") or [])
+            ] if item.get("pozadovanePovolani") else None,
+            "availablePositions": item.get("pocetMist"),
+            "employmentEndDate": item.get("terminUkonceniPracovnihoPomeru"),
+            "employmentStartDate": item.get("terminZahajeniPracovnihoPomeru"),
+            "publicAdmin": item.get("statniSpravaSamosprava", False),
+            "employer": item.get("zamestnavatel", {}).get("nazev"),
+            "employerICO": item.get("zamestnavatel", {}).get("ico"),
+            "url": item.get("urlAdresa"),
+            "agencyContract": item.get("souhlasAgenturyAgentura", False),
+            "agencyTemporaryStaffing": item.get("souhlasAgenturyUzivatel", False),
+            "asylumSeeker": item.get("azylant", False),
+            "nonEUnational": item.get("cizinecMimoEu", False),
+            "blueCard": item.get("modraKarta", False),
+            "employeeCard": item.get("zamestnaneckaKarta", False),
+            "suitabilityDetails": item.get("vhodnostiPracovnihoMista", {}).get("id") if item.get("vhodnostiPracovnihoMista") else None,
+            "contact": get_contact(item),
+            "created": item.get("datumVlozeni"),
+            "lastEdited": item.get("datumZmeny"),
+            "govID": item.get("referencniCislo")
         }
     def to_dict(self):
         return self.__dict__
@@ -141,6 +247,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
